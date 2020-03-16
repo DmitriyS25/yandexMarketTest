@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.ProfileTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2020-03-16T09:01:25" hostname="Svirskiy.local" time="385.134">
+  <properties/>
+  <testcase name="checkForEmptyLoginField" classname="test.ProfileTest" time="25.895"/>
+  <testcase name="verificationDoNotRememberLogin" classname="test.ProfileTest" time="20.781"/>
+  <testcase name="setProfileSteps" classname="test.ProfileTest" time="29.755"/>
+  <testcase name="googleLoginVerification" classname="test.ProfileTest" time="26.882"/>
+  <testcase name="twitterLoginVerification" classname="test.ProfileTest" time="30.667"/>
+  <testcase name="checkForEmptyField" classname="test.ProfileTest" time="21.06"/>
+  <testcase name="passwordDisplay" classname="test.ProfileTest" time="26.529"/>
+  <testcase name="сheckButtonRegister" classname="test.ProfileTest" time="19.806"/>
+  <testcase name="invalidLogin" classname="test.ProfileTest" time="22.163"/>
+  <testcase name="mailLoginVerification" classname="test.ProfileTest" time="27.657"/>
+  <testcase name="facebookLoginVerification" classname="test.ProfileTest" time="25.849"/>
+  <testcase name="vkontakteLoginVerification" classname="test.ProfileTest" time="23.383"/>
+  <testcase name="odnoklassnikiLoginVerification" classname="test.ProfileTest" time="31.274"/>
+  <testcase name="loginIsCorrect" classname="test.ProfileTest" time="24.304"/>
+  <testcase name="verificationIDoNotRememberThePassword" classname="test.ProfileTest" time="29.05"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[мар 16, 2020 12:01:25 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
