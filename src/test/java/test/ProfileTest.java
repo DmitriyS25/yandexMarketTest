@@ -2,6 +2,9 @@ package test;
 
 import driver.AppiumMobileDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Stories;
+import io.qameta.allure.Story;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -113,7 +116,33 @@ public class ProfileTest {
         profileSteps.signInWithMail();
     }
 
+    @Test
+    @DisplayName("Проверка пустого поля телефон при регистрации")
+    public void noPhoneNumberDuringRegistration() {
+        profileSteps.buttonLoginProfile();
+        profileSteps.registrationLogin();
+        profileSteps.noPhoneRegistration();
+    }
+
+    @Test
+    public void continuePhoneNumberDuringRegistration() {
+        profileSteps.buttonLoginProfile();
+        profileSteps.registrationLogin();
+        profileSteps.phoneRegistration();
+
+    }
+
+    @Test
+    @DisplayName("Тест кнопки Продолжить регистрацию с вашей почтой")
+    public void buttonContinueRegistrationWithYourMail() {
+        profileSteps.buttonLoginProfile();
+        profileSteps.registrationLogin();
+        profileSteps.registrationWithYourMail();
+    }
+
     @After
-    public void doneTest() { driver.closeApp(); }
+    public void doneTest() {
+        driver.closeApp();
+    }
 
 }

@@ -69,6 +69,26 @@ public class ProfileSteps {
         profileElement.isPassportAuth();
     }
 
+    @Step("Проверка пустого поля телефон при регистрации")
+    public void noPhoneRegistration(){
+        profileElement.buttonNext.click();
+        profileElement.isTestError();
+    }
+
+    @Step("Продолжить регистрацию с номером телефона")
+    public void phoneRegistration(){
+        profileElement.passportAuthorization.click();
+        profileElement.typeNumberPhone("89955527526");
+        profileElement.buttonNext.click();
+        profileElement.isPhoneCode();
+    }
+
+    @Step("Продолжить регистрацию с вашей почтой")
+    public void registrationWithYourMail(){
+        profileElement.buttonLiteNext.click();
+        profileElement.islayoutLogin();
+    }
+
     @Step("Кнопка входа через Гугл почту")
     public void signInWithGoogle() {
         profileElement.googleLogin.click();

@@ -62,6 +62,12 @@ public class ProfileElement {
     @AndroidFindBy(id = "ru.yandex.market:id/edit_phone_number")
     public AndroidElement passportAuthorization;
 
+    @AndroidFindBy(id = "ru.yandex.market:id/input_phone_code")
+    public AndroidElement phoneCode;
+
+    @AndroidFindBy(id = "ru.yandex.market:id/action_use_sms")
+    public AndroidElement buttonConfirmBySMS;
+
     @AndroidFindBy(id = "com.google.android.gms:id/cancel")
     public AndroidElement cancelAndroid;
 
@@ -70,6 +76,10 @@ public class ProfileElement {
 
     public void typeLoginPhone(String login){
         sendKeysLogin.sendKeys(login);
+    }
+
+    public void typeNumberPhone(String number){
+        passportAuthorization.sendKeys(number);
     }
 
     @AndroidFindBy(id = "ru.yandex.market:id/edit_password")
@@ -87,6 +97,9 @@ public class ProfileElement {
 
     @AndroidFindBy(id = "ru.yandex.market:id/button_next")
     public AndroidElement buttonNext;
+
+    @AndroidFindBy(id = "ru.yandex.market:id/button_lite_next")
+    public AndroidElement buttonLiteNext;
 
     @AndroidFindBy(id = "ru.yandex.market:id/text_social_message")
     public AndroidElement socialMessage;
@@ -127,6 +140,8 @@ public class ProfileElement {
     @AndroidFindBy(id = "ru.yandex.market:id/webview")
     public AndroidElement passwordRecoveryScreen;
 
+    public boolean islayoutLogin(){return layoutLogin.isDisplayed();}
+
     public boolean isGoogleView(){return googleView.isDisplayed();}
 
     public boolean isFacebookView(){return facebookView.isDisplayed();}
@@ -138,6 +153,8 @@ public class ProfileElement {
     public boolean isAndroidPopup(){return cancelAndroid.isDisplayed();}
 
     public boolean isPassportAuth(){return passportAuthorization.isDisplayed();}
+
+    public boolean isPhoneCode(){return phoneCode.isDisplayed();}
 
     public boolean isDisplayedLogin(){
         return buttonLogin.isDisplayed();
